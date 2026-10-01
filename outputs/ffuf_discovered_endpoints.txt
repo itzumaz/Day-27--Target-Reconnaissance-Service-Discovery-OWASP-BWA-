@@ -1,0 +1,44 @@
+┌──(kali㉿kali)-[~]
+└─$ ffuf -w /usr/share/wordlists/dirb/common.txt -u http://192.168.145.134/FUZZ -mc 200,301,302
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://192.168.145.134/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/wordlists/dirb/common.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200,301,302
+________________________________________________
+
+.bash_history           [Status: 200, Size: 302, Words: 6, Lines: 5, Duration: 18ms]
+assets                  [Status: 301, Size: 238, Words: 14, Lines: 8, Duration: 5ms]
+cgi-bin                 [Status: 301, Size: 239, Words: 14, Lines: 8, Duration: 1ms]
+cgi-bin/                [Status: 200, Size: 1070, Words: 58, Lines: 15, Duration: 6ms]
+crossdomain.xml         [Status: 200, Size: 200, Words: 9, Lines: 5, Duration: 5ms]
+crossdomain             [Status: 200, Size: 200, Words: 9, Lines: 5, Duration: 5ms]
+evil                    [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 2ms]
+favicon.ico             [Status: 200, Size: 3638, Words: 18, Lines: 4, Duration: 7ms]
+                        [Status: 200, Size: 28067, Words: 1845, Lines: 490, Duration: 692ms]
+gallery2                [Status: 301, Size: 240, Words: 14, Lines: 8, Duration: 3ms]
+icon                    [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 7ms]
+images                  [Status: 301, Size: 238, Words: 14, Lines: 8, Duration: 4ms]
+index                   [Status: 200, Size: 1227, Words: 83, Lines: 52, Duration: 5ms]
+index.html              [Status: 200, Size: 28067, Words: 1845, Lines: 490, Duration: 3ms]
+javascript              [Status: 301, Size: 242, Words: 14, Lines: 8, Duration: 1ms]
+joomla                  [Status: 301, Size: 238, Words: 14, Lines: 8, Duration: 4ms]
+phpmyadmin              [Status: 301, Size: 242, Words: 14, Lines: 8, Duration: 2ms]
+phpBB2                  [Status: 301, Size: 238, Words: 14, Lines: 8, Duration: 12ms]
+test                    [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 3ms]
+wordpress               [Status: 301, Size: 241, Words: 14, Lines: 8, Duration: 12ms]
+:: Progress: [4614/4614] :: Job [1/1] :: 46 req/sec :: Duration: [0:00:06] :: Errors: 0 ::

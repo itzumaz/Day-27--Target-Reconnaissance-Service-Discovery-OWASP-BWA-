@@ -1,0 +1,55 @@
+┌──(kali㉿kali)-[~]
+└─$ nmap -sC -sV -p- -T4 192.168.145.134
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-09-27 03:20 -0400
+Nmap scan report for 192.168.145.134
+Host is up (0.0032s latency).
+Not shown: 65526 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 5.3p1 Debian 3ubuntu4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 ea:83:1e:45:5a:a6:8c:43:1c:3c:e3:18:dd:fc:88:a5 (DSA)
+|_  2048 3a:94:d8:3f:e0:a2:7a:b8:c3:94:d7:5e:00:55:0c:a7 (RSA)
+80/tcp   open  http        Apache httpd 2.2.14 ((Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL...)
+|_http-server-header: Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1
+|_http-title: owaspbwa OWASP Broken Web Applications
+| http-methods: 
+|_  Potentially risky methods: TRACE
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+143/tcp  open  imap        Courier Imapd (released 2008)
+|_imap-capabilities: IDLE UIDPLUS OK completed SORT ACL NAMESPACE QUOTA ACL2=UNIONA0001 THREAD=ORDEREDSUBJECT IMAP4rev1 CAPABILITY THREAD=REFERENCES CHILDREN
+443/tcp  open  ssl/http    Apache httpd 2.2.14 ((Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL...)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_ssl-date: 2026-09-27T07:21:16+00:00; 0s from scanner time.
+|_http-title: owaspbwa OWASP Broken Web Applications
+|_http-server-header: Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1
+| ssl-cert: Subject: commonName=owaspbwa
+| Not valid before: 2013-01-02T21:12:38
+|_Not valid after:  2022-12-31T21:12:38
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+5001/tcp open  java-object Java Object Serialization
+8080/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+|_http-title: Site doesn't have a title.
+|_http-server-header: Apache-Coyote/1.1
+8081/tcp open  http        Jetty 6.1.25
+|_http-server-header: Jetty(6.1.25)
+|_http-title: Choose Your Path
+| http-methods: 
+|_  Potentially risky methods: TRACE
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5001-TCP:V=7.99%I=7%D=9/27%Time=6AB8C3E0%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,4,"\xac\xed\0\x05");
+MAC Address: 00:0C:29:3B:0C:7F (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_nbstat: NetBIOS name: OWASPBWA, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+|_smb2-time: Protocol negotiation failed (SMB2)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 26.13 seconds
